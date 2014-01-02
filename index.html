@@ -26,13 +26,20 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Hello World</title>
     </head>
+    
+    
     <body>
-
+<a href='#' onclick="window.loadUrl('http://google.com'); return false;">open</a>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript">
         
-        	 navigator.app.loadUrl("http://www.bocamarket.es/index.php?mobile_theme_ok", { openExternal:false });
+        window.loadURL = function(url){
+	    navigator.app.loadUrl(url, { openExternal:true });
+	    return false;
+}
+
+        	// navigator.app.loadUrl("http://www.bocamarket.es/index.php?mobile_theme_ok", { openExternal:false });
            // app.initialize();
         </script>
     </body>
