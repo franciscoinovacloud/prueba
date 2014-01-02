@@ -20,6 +20,7 @@ var app = {
     // Application Constructor
     initialize: function() {
         this.bindEvents();
+         window.open( "http://www.google.es", '_system');
     },
     // Bind Event Listeners
     //
